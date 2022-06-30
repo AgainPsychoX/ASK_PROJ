@@ -2,7 +2,7 @@
 
 # Kalkulator wyrażeń matematycznych (ONP) w asemblerze
 
-* Przygotowany przez Patryka Ludwikowskiego (nr. albumu 117813), testowany przez Alberta Mazura (117816).
+* Przygotowany przez Patryka Ludwikowskiego (nr. albumu 117813).
 * Projekt zaliczeniowy z Architektury Systemów Komputerowych za semestr letni 2022 informatyka drugiego roku na Uniwersytecie Rzeszowskim.
 
 
