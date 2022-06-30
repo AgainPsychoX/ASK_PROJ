@@ -1,0 +1,176 @@
+# W tym pliku są zdefiniowane dodatkowe przykłady, które także zostaną 
+# uruchomione przez skrypt testujący. Pozwala się na używanie komentarzy
+# w postaci linii zaczynąjących się od hashtagu.
+#
+# Pojedyczne wyrażenie do sprawdzenia można zapisać następująco:
+# <wyrażenie> = <wyrażenie>
+# Przykład:
+#       sin(pi) = 0
+#       cos(pi) = -1
+#       sqrt(2 - 3) = (7 - 8)^(1/2)
+#
+# Parametryzowane zmiennymi wyrażenie można zapisać następująco:
+# a) Sprawdzanie tautologii:
+#           <wyrażenie> = <wyrażenie>:
+#               dla <wartości zmiennych oddzielone przecinkiem>
+#       Przykład:
+#           log(2x, b) = log(2, b) + log(x, b):
+#               dla 10, 4
+#               dla 8, 7
+# b) Sprawdzanie wyniku:
+#       Przykład:
+#           b^2 - 4*a*c:
+#               dla 1, 1, 1 = -3
+#
+# Uwaga: Wymagana jest taka sama kolejność zmiennych w jakiej występują one
+# w wyrażeniu, bez powtarzania się (tak smao jak przy ręcznym uruchomieniu).
+#
+################################################################################
+
+# Trygonometria
+
+sin(pi) = 0
+cos(pi) = -1
+
+sin(x)^2 + cos(x)^2:
+	dla 0 = 1
+	dla 1 = 1
+	dla 3.14159265359 = 1
+	dla 2.71828182846 = 1
+	dla 123.456 = 1
+
+sin(x) = sin(x + 2*k*pi):
+	dla 1.23, 0
+	dla 1.23, 1
+	dla 1.23, -2
+
+cos(x) = cos(x + 2*k*pi):
+	dla 1.23, 0
+	dla 1.23, 1
+	dla 1.23, -2
+
+tan(x) = sin(x) / cos(x):
+	dla 0
+	dla 1
+	dla 3.14159265359
+	dla 2.71828182846
+	dla 123.456
+
+1 - cos(x) = 2 sin(x / 2) ^ 2:
+	dla 0
+	dla 1
+	dla 3.14159265359
+	dla 2.71828182846
+	dla 123.456
+
+1 - sin(x) = 2 sin(pi / 4 - x / 2) ^ 2:
+	dla 0
+	dla 1
+	dla 3.14159265359
+	dla 2.71828182846
+	dla 123.456
+
+1 + sin(x) = 2cos(pi/4 - x/2)^2:
+	dla 0
+	dla 1
+	dla 3.14159265359
+	dla 2.71828182846
+	dla 123.456
+
+1 + cos(x) = 2cos(x/2)^2:
+	dla 0
+	dla 1
+	dla 3.14159265359
+	dla 2.71828182846
+	dla 123.456
+
+(sin(x) + sin(y)) = (2sin((x+y)/2)cos((x-y)/2)):
+	dla 1, 2
+	dla 0.785398163, 1.57079633
+	dla 1.57079633, 1.57079633
+	dla 1.57079633, 3.14159265359
+	dla 3.14159265359, 0.785398163
+	dla 0.523598776, 0.785398163
+
+(sin(x) - sin(y)) = (2sin((x-y)/2)cos((x+y)/2)):
+	dla 1, 2
+	dla 0.785398163, 1.57079633
+	dla 1.57079633, 1.57079633
+	dla 1.57079633, 3.14159265359
+	dla 3.14159265359, 0.785398163
+	dla 0.523598776, 0.785398163
+
+cos(x) * cos(y) = (cos(x - y) + cos(x + y)) / 2:
+	dla 1, 2
+	dla 0.785398163, 1.57079633
+	dla 1.57079633, 1.57079633
+	dla 1.57079633, 3.14159265359
+	dla 3.14159265359, 0.785398163
+	dla 0.523598776, 0.785398163
+
+sin(x) * sin(y) = (cos(x - y) - cos(x + y)) / 2:
+	dla 1, 2
+	dla 0.785398163, 1.57079633
+	dla 1.57079633, 1.57079633
+	dla 1.57079633, 3.14159265359
+	dla 3.14159265359, 0.785398163
+	dla 0.523598776, 0.785398163
+
+sin(x) * cos(y) = (sin(x - y) + sin(x + y)) / 2:
+	dla 1, 2
+	dla 0.785398163, 1.57079633
+	dla 1.57079633, 1.57079633
+	dla 1.57079633, 3.14159265359
+	dla 3.14159265359, 0.785398163
+	dla 0.523598776, 0.785398163
+
+# Równania kwadratowe
+
+-2x^2 + 3x - 1:
+	dla 0.5 = 0
+	dla 1 = 0
+
+(2x - 1)(2x + 1):
+	dla 0.5 = 0
+	dla -0.5 = 0
+
+4x^2 = 1:
+	dla 0.5
+	dla -0.5
+
+# detla
+b^2 - 4*a*c:
+   dla 1, 1, 1 = -3
+   dla 3, -2, -1 = 1
+   dla 2, 1, 4 = -12
+
+# x1
+(-b + sqrt(b^2 - 4a*c)) / 2a:
+	dla 3, -2, -1 = 0.5
+	dla 0, 4, -1 = 0.5
+	dla -3, 1, 2 = 2
+	dla -2, 1, -8 = 4
+
+# x2
+(-b - sqrt(b^2 - 4a*c)) / 2a:
+	dla 3, -2, -1 = 1
+	dla 0, 4, -1 = -0.5
+	dla -3, 1, 2 = 1
+	dla -2, 1, -8 = -2
+
+# Logarytmy
+
+ln(7) = log(7, euler)
+log10(7) = log(7, 10)
+log(20, 4) = log(2, 4) + log(10,4)
+log(100/5, 5) = log(100, 5) - log(5, 5)
+log(7^5, 2) = 5 * log(7, 2)
+1/3 * log(5, 2) = log(5, 2^3)
+log(5, 2) = log(5, 3) / log(2, 3)
+log(5, 2) = 1 / log(2, 5)
+log(9, 2) * log(4, 3) = log(9, 3) * log(4, 2)
+log(3, 2) * log(4, 3) = log(4, 2)
+2^log(8, 2) = 8
+2^log(9, 4) = 9^log(2, 4)
+
+

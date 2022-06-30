@@ -1,0 +1,13 @@
+# Outputs
+*.exe
+*.o
+
+# Node dependencies (used in scripts)
+node_modules/
+
+# Visual Studio Code
+*.code-workspace
+#.vscode
+
+# Private stuff
+private

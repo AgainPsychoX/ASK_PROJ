@@ -1,0 +1,30 @@
+{
+	"cSpell.words": [
+		"asmloader",
+		"coldwind",
+		"easteregg",
+		"ewaluator",
+		"gynvael",
+		"loadera",
+		"LZEASG",
+		"LZEASGT",
+		"modul",
+		"NASM",
+		"scanf",
+		"SIGINT",
+		"trunc",
+		"unixtime",
+		"Wyrazenie",
+		"xadd",
+		"xchg"
+	],
+	"files.associations": {
+		"*.log": "vt100",
+		"type_traits": "cpp",
+		"compare": "cpp",
+		"new": "cpp",
+		"*.tcc": "cpp",
+		"cmath": "cpp",
+		"typeinfo": "cpp"
+	}
+}
